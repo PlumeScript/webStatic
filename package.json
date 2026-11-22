@@ -1,0 +1,17 @@
+{
+	"name": "plumeWebStatic",
+	"version": "0.1.0",
+	"description": "CLI : génère un fichier plumeWebStatic.js autonome qui exécute des scripts Plume dans le navigateur (file://, sans serveur ni réseau)",
+	"type": "module",
+	"bin": {
+		"plumeWebStatic": "bin/plumeWebStatic.js"
+	},
+	"scripts": {
+		"test": "node --test test/e2e.test.js"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"esbuild": "^0.25.0",
+		"wasmoon": "1.16.0"
+	}
+}

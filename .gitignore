@@ -1,3 +1,5 @@
+node_modules/
+example/plumeWebStatic.js
 .worktrees/
 .agent/
 .venv/

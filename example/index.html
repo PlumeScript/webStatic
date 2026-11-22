@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>plumeWebStatic — exemple</title>
+</head>
+<body>
+	<h1>plumeWebStatic</h1>
+	<p>
+		Le document ci-dessous est généré par <strong>Plume</strong>
+		(dépendances <code>cqfd</code> + <code>pages</code>), exécuté
+		entièrement dans votre navigateur — ce fichier est ouvert en
+		<code>file://</code>, sans serveur ni réseau.
+	</p>
+	<div id="my-element">En attente de <code>plume.ready</code>…</div>
+	<script src="plumeWebStatic.js"></script>
+	<script>
+		let plumeScript =
+			"use pages\n" +
+			"@Document\n" +
+			"\t$heading(Bonjour)\n" +
+			"\tCe document est généré par Plume,\n" +
+			"\texécuté à 100 % dans votre navigateur.\n" +
+			"\tPas de serveur, pas de réseau : file://.\n" +
+			"end"
+		plume.ready.then(() => plume.execute(plumeScript).then(html => {
+			document.querySelector('#my-element').innerHTML = html
+		}).catch(e => {
+			document.querySelector('#my-element').innerHTML =
+				"<pre>Erreur d'initialisation :\n" + e + "</pre>"
+		}))
+	</script>
+</body>
+</html>

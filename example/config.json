@@ -1,0 +1,5 @@
+{
+	"dependencies": ["cqfd", "pages", "html", "css"],
+	"src": "plumeWebStatic",
+	"exclude": { "pages": ["repro/", "doc/", "lib/mathjax/"] }
+}
